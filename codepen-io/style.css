@@ -1,0 +1,144 @@
+button{
+  background: #f2c33c;
+  font-size: 20px;
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;  /*round corners*/
+  border: 3px solid #808080;    
+}
+
+/*CSS has a hover state but NO Click state JS does that*/
+button:hover{
+  background-color: #7cc272;
+  color: #333333;
+}
+
+.hidden{
+  display:none ; /*hides hidden class untile button above is pressed*/
+}
+
+.showing{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  padding: 30px; /*Add Padding so text doesn't touch the edges */
+  margin:auto;
+  
+  /*display: block;*/
+  font-family: Arial, sans-serif;
+  background-color: #509FCB;
+  
+  color: #000000;
+  width: 400px;
+   
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: justify;
+ 
+}
+
+.showing li{
+  padding-left: 0;
+  /*padding: .5em 0;*/
+  
+}
+
+.showing li:last-child::after{
+  content: "";
+  display: block;
+  width: 130%; /* You can change this to 50% or 200px if you want! */
+  height: 2px;
+  background-color: hsl(40, 25%, 70%);
+  margin-top: 10px;
+  margin-left: -60px; /* Pulls the element left to match the UL edge */
+   
+  /*border-bottom: 1px solid hsl(40,25%,70%);  */
+  /*border: 3px solid #808080;*/
+  /*border-radius: 10px;*/
+}
+
+@media screen and (min-width:320px) and (max-width:4000px) {
+body {
+  /* This removes the default gap on the left, right, top, and bottom */
+  margin:0;
+  padding:0;
+  gap: 0;
+
+  @media print {
+  body {
+    -webkit-print-color-adjust: exact; /* For Chrome, Safari, Edge */
+    print-color-adjust: exact;         /* Standard property */
+  }
+}
+
+  *{
+    box-sizing: border-box;
+  }
+
+  font-family: system-ui;
+  background: #f06d06;
+  color: white;
+  
+  text-align: center;
+  
+  p:first-child{
+    margin-top:0;
+    color:  #00F;  
+  }   
+}
+
+li { page-break-inside: avoid; }
+
+}
+
+/*FOOTER
+-----------------------------------------*/
+.footer{
+  
+  display:flex;
+  gap:20px; /*gap between the icon contents inside the footer*/
+
+  /*display: inline-block;
+  vertical-align:top;*/
+
+  background: #FFA500;
+  color: #d3d4d6;
+  list-style-type:none;  /*removes the bullet point*/
+  
+  /*border-radius: 10px;*/ /*no need for a rounded box footer*/
+  padding: 10px 0; /*the padding space between the footer contents and the footer box*/
+
+  justify-content:center;
+
+  /*margin:2;*/  
+  /*margin-top:4;*/
+  /*border-top:2;*/
+
+  text-decoration:none;
+  
+}
+
+.footer li{
+  /*display: inline-block;*/
+  display: flex;
+  flex-direction: column; /* Puts the icon on top of the text */
+  align-items: center;    /* Centers the icon and text horizontally */
+  color: blue;
+  
+}
+
+.footer img{
+  width: 32px;    
+}
+
+.footer a{
+    color:#3c8453;
+    /*text-decoration:none;*/  /*will remove the underline of the links*/
+}
+
+.footer a:hover{ /*Example of a Pseudo:Class*/
+    color:#bcaa96; 
+    text-decoration:none; /*remove the underline of the links on HOVER*/
+    
+}
